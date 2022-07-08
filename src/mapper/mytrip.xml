@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+ <!-- 반드시 mapper 태그안에 작성한다, mapper에 접근 시 이름도 설정한다. -->
+ <mapper namespace="Mytrip">
+ 	<select id="airlist" parameterType="hashmap" resultType="app.mytrip.dao.MytripDTO">
+ 		select * from userAirTravelInfo where useremail= #{useremail};
+ 	</select>
+ 	<select id="roomlist" parameterType="hashmap" resultType="app.mytrip.dao.MytripRoomDTO">
+ 		select * from userTravelInfo where useremail= #{useremail};
+ 	</select>
+ 	<delete id="deleteHotel" parameterType="hashmap">
+ 		delete from userTravelInfo where useremail=#{useremail} and hotelname=#{hotelname};
+ 	</delete>
+ 	<delete id="deleteAir" parameterType="hashmap">
+ 		delete from userAirTravelInfo where useremail=#{useremail} and airnum=#{airnum};
+ 	</delete>
+ 	
+ </mapper>

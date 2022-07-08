@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+ <!-- 반드시 mapper 태그안에 작성한다, mapper에 접근 시 이름도 설정한다. -->
+ <mapper namespace="Card">
+ 	<!-- 접근할수 있는 id명과 파라미터의 타입을 작성하고 리턴하는 타입을 명시함  -->
+ 	<select id="list" resultType="map">
+ 		select * from travelCard limit 12
+ 	</select>
+ 	<select id="bannerlist" resultType="map">
+ 		select * from mainbanner
+ 	</select>
+ 	<select id="ticketlist" resultType="map">
+ 		select * from tour_ticket where ticket_kind = "티켓/패스" or ticket_kind = "항공+호텔" limit 8
+ 	</select>
+ </mapper>

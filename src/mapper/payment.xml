@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 여기 mapper은 User라는 공간이고 그 안에는 checkId라는 쿼리문이 있는 것이다.  -->
+  <mapper namespace="Pay">
+  	<!--"com.koreait.UserDTO" : .으로 이야기할 때는 페키지  -->
+  	<insert id = "payment" parameterType="app.pay.dao.paymentDTO">
+  		insert into userTravelInfo values(#{useremail},#{datefilter},#{hotelname},#{hotelImg},#{hotelPrice});
+  	</insert>
+  	<insert id = "airpayment" parameterType="app.pay.dao.AirPaymentDTO">
+  		insert into userAirTravelInfo values(#{useremail},#{datefilter},#{airline},#{airnum},#{dep},#{arr},#{price});
+  	</insert>
+  
+  </mapper>

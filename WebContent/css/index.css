@@ -1,0 +1,300 @@
+@import url('share.css');
+.mainHeader{
+  background-color: var(--white);
+  margin-bottom: 64px;
+  text-align: center;
+  width: 100%;
+}
+.mainHeader_container{
+  position: relative;
+  width: 100%; 
+}
+.headlineWrapper{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  margin-top: 48px;
+  position: relative;
+  width: 1060px;
+}
+.headline{
+  color: var(--gray-800);
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -.4px;
+  line-height: 44px;
+  text-align: left;
+}
+.travelLink{
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  flex: 0 0 auto;
+  background-color: transparent;
+  outline: none;
+  border-radius: 4px;
+  border: 0px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 8px;
+  color: var(--blue-500);
+  display: flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -.4px;
+  line-height: 16px;
+  padding-right: 0;
+}
+.travelLink:hover{
+  background-color: var(--blue-50);	
+}
+
+.mainHeader_row, .mainBanner_row{
+  margin: 0 auto;
+  position: relative;
+  width: 1080px;
+}
+.card_container, .banner_container{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.swiper-container, .swiper, .best-swiper{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.swiper-wrapper{
+  opacity: .99;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 3240px;
+  transform: translate3d(0px, 0px, 0px);
+  transition-duration: 0ms;
+}
+.swiper-slide .headerImage{
+  height: 100%;
+  width: auto;
+  transform: scale(1);
+  transition-duration: 2.5s;
+  transition-timing-function: ease-out;
+}
+.swiper-slide.image-slide{
+  border-radius: 8px;
+  box-shadow: 0 8px 12px 0 rgb(33 37 41 / 15%);
+  cursor: pointer;
+  display: inline-block;
+  height: 333px;
+  overflow: hidden;
+  position: relative;
+  width: 250px !important;
+  left: 10px;
+  margin-right: 20px;
+  z-index: 0;
+}
+.swiper-slide:hover .headerImage{
+  transform: scale(1.1);
+}
+.cardEffect{
+  background-image: linear-gradient(142deg,rgba(0,0,0,.7),hsla(0,0%,100%,0) 65%);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.cardcontent{
+  height: 100%;
+  left: 0;
+  padding: 32px 24px;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: 100%;
+}
+.cardtitle{
+  grid-gap: 8px;
+  align-items: center;
+  color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px; 
+}
+.cardtit{
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -.4px;
+  line-height: 1.29;
+  text-align: left;
+  text-shadow: 0 1px 8px rgb(33 37 41 / 60%);
+  vertical-align: middle;
+}
+.cardbox{
+  background-color: var(--green-500);
+  border-radius: 4px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -.3px;
+  line-height: 15px;
+  padding: 2px 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+.carddesribe{
+ -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: var(--white);
+  display: -webkit-box;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.3px;
+  line-height: 26px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 8px rgb(33 37 41 / 60%); 
+}
+.cardbtn{
+  border: none;
+  bottom: 32px;
+  box-shadow: 0 0 0 1px rgb(33 37 41 / 8%);
+  left: 24px;
+  position: absolute; 
+  background-color: var(--white);
+  color: var(--gray-700);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0;
+  font-size: 14px;
+  height: 40px;
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.main-button-prev,
+.main-button-next{
+  background-color: var(--white);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 2px 6px 0 rgb(0 0 0 / 5%), 0 4px 12px 0 rgb(0 0 0 / 5%);
+  height: 40px ;
+  position: absolute ;
+  text-align: center;
+  top: 50% ;
+  transform: translateY(-50%);
+  transition: .2s;
+  width: 40px ;
+  z-index: 10;
+}
+.mainbanner-button-prev.mainBannerBtn,
+.mainbanner-button-next.mainBannerBtn{
+  background-color: rgba(0,0,0,.15);
+  border: 0;
+  border-radius: 50%;
+  height: 28px;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .2s ease;
+  visibility: hidden;
+  width: 28px;
+  z-index: 1;
+}
+.mainbanner-button-prev.mainBannerBtn{
+  left: 16px;
+}
+.mainbanner-button-next.mainBannerBtn{
+  right: 16px;
+}
+.swiper:hover .mainBannerBtn{
+  visibility: visible;
+  opacity: 1;
+}
+.main-button-next.swiper-button-disabled, 
+.main-button-prev.swiper-button-disabled,
+.mainbanner-button-prev.swiper-button-disabled,
+.mainbanner-button-next.swiper-button-disabled
+{
+  display: none;
+}
+.swiper-button-prev::after, 
+.swiper-button-next::after{
+  display: none;
+}
+.main-button-prev{
+  left: 1px ;
+}
+.main-button-next{
+  right: 1px ;
+}
+.main-button-prev:hover, .main-button-next:hover{
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 2px 6px 0 rgb(0 0 0 / 5%), 0 8px 12px 0 rgb(0 0 0 / 20%);
+}
+
+
+.swiper-wrapper{
+  width: 500px;
+  height: 200px;
+}
+
+.image_container{
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.bannerImage{
+  width: 100%;
+  border-radius: 4px;
+}
+.mianBanner_wrapper{
+  overflow: visible;
+}
+
+.mainbanner-pagination{
+  bottom: 0;
+  left: 0;
+  line-height: 1;
+  margin-top: -12px;
+  position: relative;
+  text-align: center;
+  z-index: 10
+}
+.mainbanner-pagination span{
+  background-color: var(--black);
+  border-radius: 100%;
+  display: inline-block;
+  height: 8px;
+  margin: 0 4px;
+  opacity: .1;
+  width: 8px;
+}
+.mainbanner-pagination .swiper-pagination-bullet-active{
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+

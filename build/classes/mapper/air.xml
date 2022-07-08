@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Air">
+	<select id="subbannerlist" resultType="map">
+ 		select * from subbanner
+ 	</select>
+	<select id="jejuticketlist" resultType="map">
+ 		select * from jeju_ticket
+ 	</select>
+</mapper>

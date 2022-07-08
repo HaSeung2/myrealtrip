@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 여기 mapper은 User라는 공간이고 그 안에는 checkId라는 쿼리문이 있는 것이다.  -->
+  <mapper namespace="User">
+  	<!--"com.koreait.UserDTO" : .으로 이야기할 때는 페키지  -->
+  	<insert id = "join" parameterType="app.user.dao.UserDTO">
+  		insert into user values(#{useremail},#{username},#{userpw},#{check1},#{check2},#{check3},#{check4})
+  	</insert>
+  
+  	<!-- 파마미터타입으로 문자열으로 날라오고 resultType은 검색결과가 int로 나온다.
+  		 기본형 앞에는 _를 붙인다.
+  		 checkId는 문자열을 받고 인트형으로 결과값을 돌려주는  쿼리문이다. -->
+  	<select id="checkId" parameterType="string" resultType="_int">
+  		select count(*) from user where userid = #{userid}
+  	</select>
+  	<!-- 이렇게 하면  returnType이 여러가지로 나오는데, 전부 DTO의 필드들이다.
+  		 그렇기 때문에 resultType에다가 DTO(com.koreait.app.user.dao.UserDTO)을 쓸 수 있다.
+  		 만약에, 컬럼명과 동일은 필드가 있으면 그럼셋터들을 다 호출해서 세팅해서 돌려준다. -->
+  	<select id="login" parameterType="hashmap" resultType="app.user.dao.UserDTO">
+  		select * from user where useremail= #{useremail} and userpw= #{userpw}
+  	</select>
+  	<select id="checkEmail" parameterType="string" resultType="_int">
+  		select count(*) from user where useremail = #{useremail}
+  	</select>
+  	
+  	
+  	<update id="changePw" parameterType="hashmap">
+  		update user set userpw = #{userpw} where useremail = #{useremail}
+  	</update>
+  </mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Hotel">
+	<select id="hotelbannerlist" resultType="map">
+ 		select * from hotel_banner
+ 	</select>
+	<select id="sugsolist" resultType="map">
+ 		select * from up_sugso
+ 	</select>
+	<select id="specialbannerlist" resultType="map">
+ 		select * from special_hotel
+ 	</select>
+</mapper>
